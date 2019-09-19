@@ -1,0 +1,110 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  font: normal 125% / 1.4 $text-font-stack;
+  color: $text-color;
+}
+
+.title {
+  font-family: $font-montserrat;
+  font-size: 47.7px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.desc-title {
+  font-family: $font-montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  color: $brand-color;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 300;
+  color: $mid-grey;
+}
+
+.sub-head {
+  font-family: $font-montserrat;
+  font-size: 15.3px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.sub-desc {
+  font-family: $font-montserrat;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: $mid-grey;
+}
+
+.btn-text {
+  font-family: $font-montserrat;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0f0f0f;
+  text-transform: uppercase;
+
+  background: $brand-color;
+  border: none;
+}
+
+.address-title {
+  font-family: $font-montserrat;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+
+
+.address-text {
+  font-family: $font-montserrat;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .3px;
+  line-height: 16px;
+  color: $mid-grey;
+}
+
+.sub-text {
+  font-family: $font-montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  color: $mid-grey;
+}
+
+.sub-desc-text {
+  font-family: $font-montserrat;
+  font-size: 12px;
+  font-weight: 300;
+  color: $mid-grey;
+}
+
+.learn-more-text {
+  font-family: $font-montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  color: $brand-color;
+  text-transform: uppercase;
+}
+
+.footer-menu-text {
+  font-family: $font-montserrat;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: $mid-grey;
+  text-transform: uppercase;
+}

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    /> 
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>Modular Gulp Template</title>
+
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.min.css" />
+    <!--[if lte IE 9]>
+      <link href="stylesheets/non-responsive.css" rel="stylesheet" />
+    <![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--[if lt IE 9]>
+      <div id="browser-notification" class="alert alert-danger">
+        <div class="container">
+          We are sorry but it looks like your
+          <a href="http://www.whatbrowser.org/intl/en_us/" target="_blank"
+            >browser</a
+          >
+          doesn't support our website features. In order to get the full
+          experience please download a new version of
+          <a
+            title="Download Chrome"
+            href="http://www.google.com/chrome/"
+            target="_blank"
+            >Chrome</a
+          >,
+          <a
+            title="Download Safari"
+            href="http://www.apple.com/safari/download/"
+            target="_blank"
+            >Safari</a
+          >,
+          <a
+            title="Download Firefox"
+            href="http://www.mozilla.com/firefox/"
+            target="_blank"
+            >Firefox</a
+          >, or
+          <a
+            title="Download Internet Explorer"
+            href="http://www.microsoft.com/windows/internet-explorer/default.aspx"
+            target="_blank"
+            >Internet Explorer</a
+          >.
+        </div>
+      </div>
+    <![endif]-->
+
+    <header>
+      <div id="myNav" class="overlay">
+        <div class="mobile-title-holder">
+          <h3 class="mobile-title menu-first">Menu</h3>
+          <h3 class="mobile-title menu-product back-menu-first"><i class="fas fa-chevron-left"></i>Products</h3>
+          <h3 class="mobile-title headset-product headset-audio">
+              <i class="fas fa-chevron-left"></i> Headsets & Audio
+          </h3>
+          <a href="javascript:void(0)" class="closebtn">&times;</a>
+        </div>
+        <div class="overlay-content menu-first">
+          <a href="#" class="menu-item more-product">Products <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          <a href="#" class="menu-item">About</a>
+          <a href="#" class="menu-item">Community</a>
+          <a href="#" class="menu-item">Contact us</a>
+          <div class="btn-buy-holder">
+            <button class="btn-buy">
+              Buy now
+            </button>
+          </div>
+        </div>
+        <div class="overlay-content menu-product">
+          <a href="#" class="menu-item">Laptops</a>
+          <a href="#" class="menu-item">Mobile</a>
+          <a href="#" class="menu-item">Mouse & Mats</a>
+          <a href="#" class="menu-item">Keyboards</a>
+          <a href="#" class="menu-item audio-item">Headsets & audio <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+          <a href="#" class="menu-item">Console</a>
+        </div>
+        <div class="overlay-content headset-product">
+          <a href="#" class="menu-item">Wired</a>
+          <a href="#" class="menu-item">Wireless</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-md">
+        <div class="container">
+          <a href="#" class="navbar-brand"
+            ><img src="./assets/images/wordmark.svg" class="logo"
+          /></a>
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="burger-holder">
+            <img
+              src="./assets/images/burger.png"
+              class="burger-mobile"
+              alt="burger"
+            />
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav col-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Laptops</a>
+                  <a class="dropdown-item" href="#">Mobiles</a>
+                  <a class="dropdown-item" href="#">Mouses & mats</a>
+                  <a class="dropdown-item" href="#">Keyboards</a>
+                  <div class="btn-group dropright">
+                    <a
+                      class="dropdown-item dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      href="#"
+                      >Headsets & Audio</a
+                    >
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">wireless</a>
+                      <a class="dropdown-item" href="#">wired</a>
+                    </div>
+                  </div>
+                  <a class="dropdown-item" href="#">Console</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >About<span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Community</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="#">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <button class="btn-buy">Buy Now</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="home">
+      <div class="banner-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="title-holder">
+                <h1 class="title">Supreme wireless immersion</h1>
+                <p class="sub-title">
+                  When it comes to gaming immersion, sound plays a critical
+                  role. It engages your sense of hearing to determine the
+                  atmosphere and mood, creating a lifelike experience that lets
+                  you truly embody your game character. Standing by this
+                  philosophy, we’ve built a headset with THX Spatial Audio to
+                  bring you 360° positional sound, giving you greater spatial
+                  awareness. We’ve also added ergonomic design features to make
+                  this one of the most comfortable daily drivers for gaming.
+                  This is the Razer Nari.
+                </p>
+                <div class="img-logo-holder">
+                  <img
+                    src="assets/images/thx.png"
+                    class="img-logo"
+                    alt="logo"
+                  />
+                  <img
+                    src="assets/images/chroma.png"
+                    class="img-logo"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 pad-none-right">
+              <div class="right-banner-holder">
+                <div class="product-title-holder">
+                  <img
+                    src="assets/images/razer-nari-logo.svg"
+                    class="logo-product"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="complented-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="desc-title-holder">
+                <h3 class="desc-title">Complemented by comport</h3>
+                <p class="sub-title">
+                  The Razer Nari is designed so that its immersive technology is
+                  complemented by comfortable features, letting you escape into
+                  game worlds for hours without strain.
+                </p>
+              </div>
+            </div>
+            <div class="complented-item-holder">
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-Cooling-Gel-Infused-Cushions-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">Cooling gel-infused cushions</h3>
+                <p class="sub-desc">
+                  Reduces heat build-up during intense gaming sessions
+                </p>
+              </div>
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-Auto-Adjusting-Headband-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">Auto-adjusting headband</h3>
+                <p class="sub-desc">
+                  Maximum adjustability to fit seamlessly onto any head size
+                </p>
+              </div>
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-Swiveling-Earcups-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">Swiveling Earcups</h3>
+                <p class="sub-desc">
+                  Adapting to the shape and position of your ears
+                </p>
+              </div>
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-Game-Chat-Balance-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">Game/chat balance</h3>
+                <p class="sub-desc">
+                  Fine-tune between game and chat volume for the perfect mix
+                  that lets you enjoy immersive sound without interrupting team
+                  communication.
+                </p>
+              </div>
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-Wireless-Audio-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">2.4GHz Wireless Audio</h3>
+                <p class="sub-desc">
+                  Get lag-free, high-fidelity gaming audio with a wireless range
+                  of up to 12 meters smoothly without disconnection.
+                </p>
+              </div>
+              <div class="complented-item">
+                <div class="img-holder">
+                  <img
+                    src="./assets/images/razer-nari-35-mm-Wired-Mode-icon.svg"
+                    alt="logo"
+                  />
+                </div>
+                <h3 class="sub-head">Wired Mode</h3>
+                <p class="sub-desc">
+                  Get seamless cross-platform compatibility via a 3.5 mm audio
+                  jack in wired mode. Enjoy high quality stereo sound whether
+                  you’re playing on PC, consoles or mobile.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-image-container">
+        <div class="container">
+          <div class="product-image-title-holder">
+            <h3 class="desc-title">Product Images</h3>
+          </div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide lightbox">
+                <button type="button" class="view-btn btn-text">
+                  View fullscreen
+                </button>
+                <img
+                  data-img="./assets/images/razer-nari-gallery-05-wireless-gaming-headset XS.jpg"
+                  src="./assets/images/razer-nari-gallery-05-wireless-gaming-headset XS.jpg"
+                  alt="pic"
+                />
+              </div>
+              <div class="swiper-slide lightbox">
+                <button class="view-btn btn-text ">View fullscreen</button>
+                <img
+                  data-img="./assets/images/razer-nari-gallery-06-wireless-gaming-headset xs.jpg"
+                  src="./assets/images/razer-nari-gallery-06-wireless-gaming-headset xs.jpg"
+                  alt="pic"
+                />
+              </div>
+              <div class="swiper-slide lightbox">
+                <button class="view-btn btn-text ">View fullscreen</button>
+                <img
+                  data-img="./assets/images/razer-nari-gallery-07-wireless-gaming-headset xs.jpg"
+                  src="./assets/images/razer-nari-gallery-07-wireless-gaming-headset xs.jpg"
+                  alt="pic"
+                />
+              </div>
+              <div class="swiper-slide lightbox">
+                <button class="view-btn btn-text ">View fullscreen</button>
+                <img
+                  data-img="./assets/images/razer-nari-gallery-08-wireless-gaming-headset xs.jpg"
+                  src="./assets/images/razer-nari-gallery-08-wireless-gaming-headset xs.jpg"
+                  alt="pic"
+                />
+              </div>
+              <div class="swiper-slide lightbox">
+                <button class="view-btn btn-text ">View fullscreen</button>
+                <img
+                  data-img="./assets/images/razer-nari-gallery-08-wireless-gaming-headset xs.jpg"
+                  src="./assets/images/razer-nari-gallery-08-wireless-gaming-headset xs.jpg"
+                  alt="pic"
+                />
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spatial-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="spatial-holder hideme">
+                <h3 class="desc-title">Thx spartial audio</h3>
+                <p class="sub-text">
+                  THX Spatial Audio goes beyond traditional surround sound by
+                  simulating sound in a 360° sphere around you. With the Nari
+                  Ultimate, you can now react to any in-game movement, even if
+                  it’s coming from above or beneath you, giving you heightened
+                  senses during your game. Unleash your predatory instincts with
+                  sound as a weapon.
+                </p>
+                <img src="assets/images/thx.png" class="img-logo" alt="logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-product-container">
+        <div class="container con-pad">
+          <div class="other-product-holder">
+            <h3 class="desc-title">Explore other products</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-pad">
+              <div class="product-holder">
+                <div class="product-image-holder">
+                  <img
+                    src="assets/images/Nari-Ultimate-Base.png"
+                    class="product-item"
+                  />
+                  <img
+                    src="assets/images/powered-by-chroma-xs.png"
+                    class="side-logo"
+                  />
+                </div>
+                <div class="product-detail-holder">
+                  <h3 class="sub-head">Razer nari ultimate</h3>
+                  <p class="sub-desc-text">
+                    Wireless Gaming Headset with Razer HyperSense
+                  </p>
+                  <a class="learn-more-text" href="#">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-pad">
+              <div class="product-holder">
+                <div class="product-image-holder">
+                  <img
+                    src="assets/images/Nari-Ultimate-Base.png"
+                    class="product-item"
+                  />
+                  <img
+                    src="assets/images/powered-by-chroma-xs.png"
+                    class="side-logo"
+                  />
+                </div>
+                <div class="product-detail-holder">
+                  <h3 class="sub-head">Razer nari</h3>
+                  <p class="sub-desc-text">
+                    Wired Gaming Headset with Razer HyperSense
+                  </p>
+                  <a class="learn-more-text" href="#">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 m-d-none col-pad">
+              <div class="product-holder">
+                <div class="product-image-holder">
+                  <img
+                    src="assets/images/Mamba-Wireless-Base.png"
+                    class="product-item"
+                  />
+                  <img
+                    src="assets/images/powered-by-chroma-xs.png"
+                    class="side-logo"
+                  />
+                </div>
+                <div class="product-detail-holder">
+                  <h3 class="sub-head">Razer Mamba Wireless</h3>
+                  <p class="sub-desc-text">
+                    Full Razer Chroma™ and Wireless Convenience
+                  </p>
+                  <a class="learn-more-text" href="#">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 m-d-none col-pad">
+              <div class="product-holder">
+                <div class="product-image-holder">
+                  <img
+                    src="assets/images/BlackWidow-Elite-Base.png"
+                    class="product-item"
+                  />
+                  <img
+                    src="assets/images/powered-by-chroma-xs.png"
+                    class="side-logo"
+                  />
+                </div>
+                <div class="product-detail-holder">
+                  <h3 class="sub-head">Razer BlackWidow Elite</h3>
+                  <p class="sub-desc-text">
+                    The Complete Mechanical Gaming Keyboard
+                  </p>
+                  <a class="learn-more-text" href="#">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-product-holder">
+            <button class="btn-product">View all products</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="contact-form-holder">
+                <h3 class="desc-title">Ask a question</h3>
+                <form action="#">
+                  <div class="name-holder">
+                    <input
+                      type="text"
+                      id="fname"
+                      class="fname"
+                      name="fname"
+                      placeholder="Name"
+                      required
+                    />
+                    <input
+                      type="number"
+                      id="phonenumber"
+                      class="phonenumber"
+                      name="phonenumber"
+                      placeholder="Phone Number"
+                      required
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    id="email"
+                    class="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="address"
+                    class="address"
+                    name="address"
+                    placeholder="Permanent Address"
+                  />
+                  <textarea
+                    id="Message"
+                    class="message"
+                    name="message"
+                    placeholder="Message"
+                    style="height:200px"
+                  ></textarea>
+                  <button type="submit" class="btn-send btn-text">Send</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="info-holder">
+                <h3 class="desc-title">Information</h3>
+                <div class="address-wrapper">
+                  <div class="address-holder">
+                    <h3 class="address-title">Address</h3>
+                    <p class="address-text">
+                      123 East 123th St. <br />Floor 123 <br />New York, NY,
+                      10003
+                    </p>
+                  </div>
+                  <div class="address-holder">
+                    <h3 class="address-title">Phone</h3>
+                    <p class="address-text">+1 234 567-8910</p>
+                  </div>
+                  <div class="address-holder">
+                    <h3 class="address-title">Email</h3>
+                    <p class="address-text">hello@fullstack.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="container con-right">
+          <div class="row">
+            <div class="col-md-3 col-sm-2">
+              <img src="./assets/images/wordmark.svg" class="footer-logo" />
+            </div>
+            <div class="col-md-6 col-sm-8">
+              <ul class="footer-menu">
+                <li class="footer-item footer-menu-text">
+                  products
+                </li>
+                <li class="footer-item footer-menu-text">
+                  about
+                </li>
+                <li class="footer-item footer-menu-text">
+                  community
+                </li>
+                <li class="footer-item footer-menu-text">
+                  contact us
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-2 pad-none-right">
+              <ul class="footer-social">
+                <li class="social-item">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/twitter-logo-silhouette.svg"
+                      class="twitter-logo"
+                      alt="twitter"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/facebook-logo.svg"
+                      class="facebook-logo"
+                      alt="fb"
+                  /></a>
+                </li>
+                <li class="social-item">
+                  <a href="#"
+                    ><img
+                      src="./assets/images/google-plus.svg"
+                      class="google-logo"
+                      alt="google"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-holder">
+          <p class="coryright">
+            Copyright © 2019 FULLSTACKHQ Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- build:js scripts/main.min.js -->
+    <script src="./scripts/vendors/jquery.min.js"></script>
+    <script src="./scripts/vendors/tether.min.js"></script>
+    <script src="./scripts/vendors/bootstrap.min.js"></script>
+    <script src="./scripts/vendors/swiper.min.js"></script>
+    <script src="./scripts/core/base.js"></script>
+    <script src="./scripts/modules/theme-module.js"></script>
+    <script src="./scripts/bootstrapper.js"></script>
+    <!-- endbuild -->
+
+    <!--[if lte IE 9]>
+      <script src="javascripts/non-responsive.js"></script>
+    <![endif]-->
+  </body>
+</html>
